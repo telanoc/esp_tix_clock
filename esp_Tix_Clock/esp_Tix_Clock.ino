@@ -50,8 +50,13 @@
  * 
  * TODO: Save alarm time to EEPROM
  *       Work out how to have an alarm beeper (out of pins!)
- *       Get this into github 
- *       make the boards public on Osh Park
+ *
+ * TODO DONE:
+ *
+ *      Code is at https://github.com/telanoc/esp_tix_clock
+ *
+ *      Boards at https://www.oshpark.com/shared_projects/UMcsDmIr
+ *                https://www.oshpark.com/shared_projects/IgKxO56E
  * 
  * ----------------------------------------------------------------------
  */
@@ -114,9 +119,9 @@ WiFiUDP udp;
 
 // If this was a good clock, it'd have every timezone defined and let you pick
 // which one you wanted during access point setup.  Guess what... this clock
-// don't do that.
+// isn't 100% good.
 
-//US Central Time Zone (Chicago, Houston)
+//US Central Time Zone (Chicago, Dallas, etc)
 // Format: Name, which, day of week, month, hour to change, new offset from utc
 TimeChangeRule usCDT = {"CDT", Second, dowSunday, Mar, 2, -300};
 TimeChangeRule usCST = {"CST", First, dowSunday, Nov, 2, -360};
